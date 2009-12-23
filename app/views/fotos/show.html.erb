@@ -1,0 +1,11 @@
+<h2 class="style_titles">Você está na categoria: <i><%= @categoria.nome %></i></h2> <br />
+<div id="principal">
+  <% @fotos.each do |f| %>
+  <div class="conteinerfoto">
+      <%= lightbox_image_tag( f.imagem.url(:small), f.imagem.url(:large), {:class=>"img_show"}, :rel => "lightbox[group]") %><br>
+  </div>
+  <% end %>
+</div>
+<div id="linkVoltar">
+  <%= link_to "Voltar", fotos_path, :class => "back" %>
+</div>

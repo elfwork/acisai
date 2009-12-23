@@ -1,0 +1,19 @@
+<%= title "Fotos" %>
+<div id="pnlFotos">
+  <h2 class="style_titles">Navegue pelas Categorias</h2><br />
+  <% unless @categorias.empty? %>
+    <% @categorias.each do |c| %>
+      <div id="principal">
+         <div class="conteinerfoto_album">
+          <%= link_to(image_tag(c.capa.url(:small), :border => "0"), :controller => "fotos", :action => "show", :id => c.id) %><br>
+          <p class="title_album"><%= link_to c.nome, :controller => "fotos", :action => "show", :id => c.id %> </p><br>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <%= "Ainda não temos fotos casdastradas." %>
+  <% end %>
+</div>
+<div id="linkVoltar">
+  <%= link_to "Voltar", {:controller => "home", :action => "index"}, :class => "back" %>
+</div>

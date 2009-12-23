@@ -1,0 +1,44 @@
+<%= title "Fale Conosco" %>
+<h2 class="style_titles">Contato</h2><br />
+<div id="pnlContatoAll">
+  <div id="pnlContato">
+
+    <% form_for(@contact) do |f|  %>
+      <%= error_messages_for :contact,
+        :header_message => "Por Favor tente Novamente",
+        :message => "Verifique os seguintes campos:" %><br />
+      <fieldset class="fiel_contato">
+        <legend>Seus Dados</legend>
+        <p>Nome:<small><i>(Requerido)</i></small></p>
+        <%= text_field "contact", "nome", :size => 30, :class => "forms" %><br />
+
+        <p>Email:<small><i>(Requerido)</i></small></p>
+        <%= text_field "contact", "email", :size => 30, :class => "forms" %><br />
+
+        <p>Assunto:<small><i>(Requerido)</i></small></p>
+        <%= text_field "contact", "assunto", :size => 30, :class => "forms" %><br />
+      </fieldset>
+      <br />
+      <fieldset class="fiel_contato">
+        <legend>Mensagem</legend>
+        <p>Mensgem:<small><i>(Requerido)</i></small></p>
+        <%= text_area "contact", "mensagem", :rows => 8, :cols => 30, :class => "forms_area", :style => "overflow: auto;" %><br />
+      </fieldset>
+      <br />
+      <%= submit_tag "Enviar", :class => "forms_button" %>
+
+    <% end %>
+
+  </div>
+  <div id="pnlContatoRight">
+    <p><b>Acisai - 2009</b></p>
+    <p>Rua do Comércio, 14 sala 03</p>
+    <p>Fone: (54) 3374-1239</p>
+    <p>Ibiaçá - RS</p>
+    <%= image_tag("contato.jpg", :class => "img_contato") %>
+  </div>
+</div>
+
+<div id="linkVoltar">
+  <%= link_voltar("Voltar") %>
+</div>

@@ -1,0 +1,46 @@
+<h2 class="style_titles">Convênios</h2><br />
+
+<div id="pnlSobre">
+
+  <p>A ACISAI tem convênios firmados com várias instituições e empresas, entre elas:</p>
+  <br />
+
+
+	<b>SAÚDE MAIS</b>
+	<div class="saude-center">
+	  <%= lightbox_image_tag( "mais_small.jpg", "/images/saude_mais.jpg", :rel => "lightbox[group]") %>
+	</div>
+
+	<br />
+
+    <b>SAÚDE CENTER CLÍNICA</b>
+    <div class="saude-center">
+      <%= lightbox_image_tag( "1_small.jpg", "/images/1.jpg", :rel => "lightbox[group]") %>
+      <%= lightbox_image_tag( "2_small.jpg", "/images/2.jpg", :rel => "lightbox[group]") %>
+      <%= lightbox_image_tag( "3_small.jpg", "/images/3.jpg", :rel => "lightbox[group]") %>
+      <%= lightbox_image_tag( "4_small.jpg", "/images/4.jpg", :rel => "lightbox[group]") %>
+      <br />
+      <br /><b>Check OK</b><br />
+      <%= link_to image_tag("check_ok.jpg"), "http://www.checkok.com.br/" %>
+    </div>
+
+  <br />
+  <br />
+
+  <h3>SAÚDE +</h3>
+
+  <b>Documentos Necessários</b><br /><br />
+  <ul>
+    <li>01 foto 3x4</li>
+    <li>CPF</li>
+    <li>Identidade</li>
+    <li>Custo anual por usuário: <b>R$ 10,00</b></li>
+  </ul>
+  <p>Pode ser feito para Empresários, Funcionários e Dependentes</p>
+  <p>Informações na ACISAI pelos telefones 3374-1239 ou  nos envie uma mensagem através do nosso <%= link_to "formulário", new_contact_path() %> de contato</p>
+
+</div>
+
+<div id="linkVoltar">
+  <%= link_voltar("Voltar") %>
+</div>

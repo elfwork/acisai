@@ -1,0 +1,23 @@
+<h1> Admin Area </h1>
+
+<h3>Albums - (<%= link_to "Criar Um", new_categoria_path %>)</h3><br><br>
+
+<% @categorias.each do |c| %>
+  <%= link_to c.nome, :controller => "admin", :action => "show", :id => c.id %><br>
+<% end %>
+<br><br>
+<h3>Gerenciamento das Fotos</h3>
+<%= link_to "Create a new Photo", new_foto_path %><br>
+<br><br>
+<h3>Gerenciar Noticias</h3>
+<%= link_to "Cadastrar nova noticia", :controller => "news", :action => "new" %>
+
+<% @noticias.each do |n| %>
+  <br><b>Titulo: </b><%= n.titulo %><br>
+  <b>Noticia: </b><%=h truncate(n.corpo, 50) %><br>
+  <b>Cadastrada em: </b><%= data_bonita(n.created_at) %>
+  <small>
+    <%= link_to "Editar", {:controller => "news", :action => "edit", :id => n.id} %>
+    <%= link_to "Deletar",n, :method => :delete  %>
+  </small><br><br>
+<% end %>

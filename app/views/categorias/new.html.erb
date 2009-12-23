@@ -1,0 +1,19 @@
+<h1>New categoria</h1>
+
+<% form_for :categoria, @categoria, :url => categorias_path, :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  
+   <p><b>Foto de capa:</b>
+  	<%= f.file_field :capa %><br />
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', admin_index_path %>

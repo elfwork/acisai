@@ -1,0 +1,10 @@
+
+log/*.log
+nbproject/**
+tmp/**/*
+db/*.sqlite3
+public/system/**
+.DS_Store
+*.rb~
+*.html.erb~
+*.yml~

@@ -1,0 +1,27 @@
+<p>
+  <% @cat.each do |cat| %>
+  <ul>
+    <li>Nome: <%= cat.nome %></li>
+    <li>Criada em:  <%= data_bonita(cat.created_at) %></li>
+    <small>
+      <%= link_to "Editar", edit_categoria_url(cat.id) %>
+      <%= link_to "Deletar",cat, :method => :delete  %>
+    </small><br />
+  </ul>
+<% end %>
+</p>
+<br><br>
+<h2>Fotos Cadastradas</h2>
+
+<div id="fotos_cadastradas">
+  <% @fotos.each do |f| %>
+    <%= image_tag f.imagem.url(:small) %>
+    <small>
+      <%= link_to "Editar", edit_foto_url(f.id) %>
+      <%= link_to "Deletar",f, :method => :delete  %>
+    </small>
+  <% end %>
+</div>
+<br>
+
+<%= link_to "Voltar", admin_index_path %>

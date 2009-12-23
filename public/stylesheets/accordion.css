@@ -1,0 +1,43 @@
+sdiv#accordion {
+	clear: both;
+	border: 1px solid #666;
+	width: 800px;
+	font-family: 'Helvetica', sans-serif;
+	margin: 0 auto;
+	height: auto;
+}
+
+div#accordion h3 {
+	padding: 4px 6px 4px 6px;
+	margin: 0;
+	border-style: none none none none;
+	border-bottom-color: #182052;
+	border-width: 0.5px 0px 0.5px 0px;
+	color: #666;
+	background: #F1F1F1;
+	height: auto;
+	font-size: 14px;
+}
+
+div#accordion h3:hover {
+	background: #E5E5E5;
+}
+
+div#accordion h3 #visible {
+	color:#CED7EF;
+	background-color: #FFF;
+}
+
+div#accordion div.panel {
+	margin: 0;
+	padding-bottom: 0;
+	border: 1px solid #E5E5E5;
+}
+
+div#accordion div.panelBody {
+	padding: 7px 5px;
+	height: auto;
+	text-align: justify;
+	font-family: Arial, Helvetica, Sans-serif;
+	font-size: 13px;
+}

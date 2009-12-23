@@ -1,0 +1,19 @@
+<h2 class="style_titles">Exibindo <%= @expo.titulo %></h2>
+<br /><br />
+<div id="accordion">
+    <div class="panel">
+      <h3>
+				<%= image_tag("arrow.png", :class => "arrow") %><%= @expo.titulo %>
+      </h3>
+      <div class="panelBody">
+        <p>
+          <%= @expo.corpo %>
+        </p>
+      </div>
+    </div>
+</div>
+<script>var acc = new Accordion("accordion", "h3", "acc");</script>
+<div id="linkVoltar">
+  <%= link_voltar("Voltar") %>
+</div>
+<br /><br /><br /><br />

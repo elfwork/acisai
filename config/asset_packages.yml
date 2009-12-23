@@ -1,0 +1,13 @@
+--- 
+javascripts: 
+- base: 
+  - prototype
+  - dragdrop
+  - lightbox
+  - application
+  - controls
+  - effects
+stylesheets: 
+- base: 
+  - home
+  - lightbox

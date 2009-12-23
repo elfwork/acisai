@@ -1,0 +1,28 @@
+<h2 class="style_titles">
+  <% if  @status == "0" %>
+    Eventos passadas
+  <% else %>
+    Eventos futuros
+  <% end %>
+   (<%= @noticias.size  %>)
+</h2><br /><br />
+
+<div id="accordion">
+  <% @noticias.each do |n| %>
+    <div class="panel">
+      <h3>
+       <%= image_tag("arrow.png", :class => "arrow") %> <%= n.titulo %> - <small>(<%= data_bonita(n.created_at) %>)</small>
+      </h3>
+      <div class="panelBody">
+        <p>
+          <%= n.corpo %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<script>var acc = new Accordion("accordion", "h3", "acc");</script>
+<div id="linkVoltar">
+  <%= link_voltar("Voltar") %>
+</div>
+<br /><br /><br /><br />
